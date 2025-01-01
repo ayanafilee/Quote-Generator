@@ -77,6 +77,7 @@ function App() {
                 href={tweetUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Share quote on Twitter"
                 className="group p-4 bg-slate-800/50 hover:bg-blue-600 text-blue-400 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 shadow-inner"
               >
                 <Twitter size={22} className="group-hover:scale-110 transition-transform" />
@@ -85,6 +86,7 @@ function App() {
               {/* Copy Button */}
               <button
                 onClick={copyToClipboard}
+                aria-label="Copy quote to clipboard"
                 className="group p-4 bg-slate-800/50 hover:bg-emerald-600 text-emerald-400 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 shadow-inner"
               >
                 {copied ? <Check size={22} /> : <Copy size={22} className="group-hover:scale-110 transition-transform" />}
@@ -103,7 +105,7 @@ function App() {
 
         {/* Portfolio Footer */}
         <p className="text-center mt-8 text-slate-500 text-sm font-light tracking-widest uppercase">
-          Build with React & Tailwind • 2024
+          Build with React & Tailwind • 2026
         </p>
       </main>
     </div>
