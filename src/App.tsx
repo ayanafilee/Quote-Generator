@@ -90,13 +90,20 @@ function App() {
               </a>
 
               {/* Copy Button */}
-              <button
-                onClick={copyToClipboard}
-                aria-label="Copy quote to clipboard"
-                className="group p-4 bg-slate-800/50 hover:bg-emerald-600 text-emerald-400 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 shadow-inner"
-              >
-                {copied ? <Check size={22} /> : <Copy size={22} className="group-hover:scale-110 transition-transform" />}
-              </button>
+              <div className="flex flex-col items-center gap-2">
+                <button
+                  onClick={copyToClipboard}
+                  aria-label="Copy quote to clipboard"
+                  className="group p-4 bg-slate-800/50 hover:bg-emerald-600 text-emerald-400 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 shadow-inner"
+                >
+                  {copied ? <Check size={22} /> : <Copy size={22} className="group-hover:scale-110 transition-transform" />}
+                </button>
+                {copied && (
+                  <span className="text-emerald-300 text-xs uppercase tracking-widest">
+                    Copied!
+                  </span>
+                )}
+              </div>
             </div>
 
             <button
