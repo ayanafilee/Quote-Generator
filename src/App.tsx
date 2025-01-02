@@ -8,6 +8,9 @@ const quotes = [
   { text: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
   { text: "The harder you work for something, the greater you’ll feel when you achieve it.", author: "Unknown" },
   { text: "Dream bigger. Do bigger.", author: "Unknown" },
+  { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" },
+  { text: "It always seems impossible until it’s done.", author: "Nelson Mandela" },
+  { text: "Start where you are. Use what you have. Do what you can.", author: "Arthur Ashe" },
 ];
 
 function App() {
