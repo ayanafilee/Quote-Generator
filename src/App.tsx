@@ -18,7 +18,10 @@ function App() {
   const [copied, setCopied] = useState(false);
 
   const getNewQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+    while (quotes[randomIndex].text === quote.text && quotes.length > 1) {
+      randomIndex = Math.floor(Math.random() * quotes.length);
+    }
     setQuote(quotes[randomIndex]);
   };
 
