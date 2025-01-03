@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Quote, Twitter, Copy, RefreshCw, Check, ExternalLink } from "lucide-react";
+import { Quote, Twitter, Copy, RefreshCw, Check } from "lucide-react";
 
 const quotes = [
   { text: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
