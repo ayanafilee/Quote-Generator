@@ -108,6 +108,7 @@ function App() {
 
             <button
               onClick={getNewQuote}
+              aria-label="Generate a new random quote"
               className="flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] active:scale-95 group"
             >
               <RefreshCw size={20} className="group-hover:rotate-180 transition-transform duration-700" />
