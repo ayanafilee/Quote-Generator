@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote, Twitter, Copy, RefreshCw, Check } from "lucide-react";
 
-const quotes = [
+type QuoteType = {
+  text: string;
+  author: string;
+};
+
+const quotes: QuoteType[] = [
   { text: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
   { text: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
   { text: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
@@ -14,7 +19,7 @@ const quotes = [
 ];
 
 function App() {
-  const [quote, setQuote] = useState(quotes[0]);
+  const [quote, setQuote] = useState<QuoteType>(quotes[0]);
   const [copied, setCopied] = useState(false);
 
   const getNewQuote = () => {
