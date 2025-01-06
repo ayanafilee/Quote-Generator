@@ -30,10 +30,14 @@ function App() {
     setQuote(quotes[randomIndex]);
   };
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(`"${quote.text}" — ${quote.author}`);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(`"${quote.text}" — ${quote.author}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("Copy failed:", error);
+    }
   };
 
   // The "addlink" logic for Twitter sharing
