@@ -128,7 +128,7 @@ function App() {
 
         {/* Portfolio Footer */}
         <p className="text-center mt-8 text-slate-500 text-sm font-light tracking-widest uppercase">
-          Build with React & Tailwind • 2026
+          Build with React & Tailwind • {new Date().getFullYear()}
         </p>
       </main>
     </div>
