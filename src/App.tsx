@@ -60,7 +60,7 @@ function App() {
         >
           {/* Decorative Quote Icon */}
           <div className="absolute top-0 left-10 -translate-y-1/2 bg-blue-600 p-4 rounded-2xl shadow-lg shadow-blue-600/50">
-            <Quote className="text-white w-8 h-8" />
+            <Quote aria-hidden="true" className="text-white w-8 h-8" />
           </div>
 
           <AnimatePresence mode="wait">
