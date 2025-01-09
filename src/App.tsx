@@ -101,6 +101,7 @@ function App() {
               {/* Copy Button */}
               <div className="flex flex-col items-center gap-2">
                 <button
+                  type="button"
                   onClick={copyToClipboard}
                   aria-label="Copy quote to clipboard"
                   className="group p-4 bg-slate-800/50 hover:bg-emerald-600 text-emerald-400 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 shadow-inner"
@@ -116,6 +117,7 @@ function App() {
             </div>
 
             <button
+              type="button"
               onClick={getNewQuote}
               aria-label="Generate a new random quote"
               className="flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] active:scale-95 group"
