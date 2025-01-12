@@ -111,7 +111,12 @@ function App() {
                   {copied ? <Check size={22} /> : <Copy size={22} className="group-hover:scale-110 transition-transform" />}
                 </button>
                 {copied && (
-                  <span className="text-emerald-300 text-xs uppercase tracking-widest">
+                  <span
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                    className="text-emerald-300 text-xs uppercase tracking-widest"
+                  >
                     Copied!
                   </span>
                 )}
