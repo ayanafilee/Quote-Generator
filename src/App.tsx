@@ -22,6 +22,8 @@ function App() {
   const [quote, setQuote] = useState<QuoteType>(quotes[0]);
   const [copied, setCopied] = useState(false);
 
+  const quoteString = `"${quote.text}" — ${quote.author}`;
+
   const getNewQuote = () => {
     let randomIndex = Math.floor(Math.random() * quotes.length);
     while (quotes[randomIndex].text === quote.text && quotes.length > 1) {
@@ -32,7 +34,7 @@ function App() {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(`"${quote.text}" — ${quote.author}`);
+      await navigator.clipboard.writeText(quoteString);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (error) {
@@ -42,7 +44,7 @@ function App() {
 
   // The "addlink" logic for Twitter sharing
   const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-    `"${quote.text}" — ${quote.author}`
+    quoteString
   )}`;
 
   return (
