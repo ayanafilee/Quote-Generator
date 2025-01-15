@@ -20,8 +20,9 @@ const quotes: QuoteType[] = [
 
 function App() {
   const [quote, setQuote] = useState<QuoteType>(quotes[0]);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<boolean>(false);
 
+  const currentYear = new Date().getFullYear();
   const quoteString = `"${quote.text}" — ${quote.author}`;
 
   const getNewQuote = () => {
@@ -140,7 +141,7 @@ function App() {
 
         {/* Portfolio Footer */}
         <p className="text-center mt-8 text-slate-500 text-sm font-light tracking-widest uppercase">
-          Build with React & Tailwind • {new Date().getFullYear()}
+          Build with React & Tailwind • {currentYear}
         </p>
       </main>
     </div>
