@@ -1,15 +1,28 @@
-import "./app.css"
+import "./app.css";
 
 import React, { useState } from "react";
 
 const quotes = [
-  { text: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
-  { text: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
-  { text: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
-  { text: "The harder you work for something, the greater you’ll feel when you achieve it.", author: "Unknown" },
+  {
+    text: "The best way to get started is to quit talking and begin doing.",
+    author: "Walt Disney",
+  },
+  {
+    text: "Don’t let yesterday take up too much of today.",
+    author: "Will Rogers",
+  },
+  {
+    text: "It’s not whether you get knocked down, it’s whether you get up.",
+    author: "Vince Lombardi",
+  },
+  {
+    text: "The harder you work for something, the greater you’ll feel when you achieve it.",
+    author: "Unknown",
+  },
   { text: "Dream bigger. Do bigger.", author: "Unknown" },
 ];
 
+const lists = ["ayana", "bana", "Barekegn"];
 function App() {
   const [quote, setQuote] = useState(quotes[0]);
 
@@ -18,7 +31,9 @@ function App() {
     setQuote(quotes[randomIndex]);
   };
 
-  return (
+
+if( lists.length == 4){
+    return (
     <div className="h-screen flex items-center justify-center bg-gradient-to-br from-sky-300 to-blue-800">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-80 text-center">
         <p className="text-lg italic text-gray-800">"{quote.text}"</p>
@@ -29,9 +44,23 @@ function App() {
         >
           New Quote
         </button>
+        <ul>
+          {lists.map((name, index) => (
+            <li key={index}>{name}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
+}
+else{
+  return(
+    <div>
+      this is the last time 
+    </div>
+  )
+}
+
 }
 
 export default App;
