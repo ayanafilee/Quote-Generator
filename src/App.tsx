@@ -1,5 +1,4 @@
 import "./app.css";
-
 import React, { useState } from "react";
 
 const quotes = [
@@ -22,7 +21,8 @@ const quotes = [
   { text: "Dream bigger. Do bigger.", author: "Unknown" },
 ];
 
-const lists = ["ayana", "bana", "Barekegn"];
+const lists = ["Ayana", "Bana", "Barekegn"];
+
 function App() {
   const [quote, setQuote] = useState(quotes[0]);
 
@@ -31,36 +31,31 @@ function App() {
     setQuote(quotes[randomIndex]);
   };
 
-
-if( lists.length == 4){
-    return (
+  return lists.length === 4 ? (
     <div className="h-screen flex items-center justify-center bg-gradient-to-br from-sky-300 to-blue-800">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-80 text-center">
         <p className="text-lg italic text-gray-800">"{quote.text}"</p>
         <p className="text-sm text-gray-600 mt-3">– {quote.author}</p>
+
         <button
           onClick={getNewQuote}
           className="mt-6 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
         >
           New Quote
         </button>
-        <ul>
+
+        <ul className="mt-4 text-left list-disc list-inside">
           {lists.map((name, index) => (
             <li key={index}>{name}</li>
           ))}
         </ul>
       </div>
     </div>
-  );
-}
-else{
-  return(
-    <div>
-      the lists number is not 4
+  ) : (
+    <div className="h-screen flex items-center justify-center bg-gray-100 text-lg text-gray-800">
+      <p>The list must contain exactly 4 items. and</p>
     </div>
-  )
-}
-
+  );
 }
 
 export default App;
