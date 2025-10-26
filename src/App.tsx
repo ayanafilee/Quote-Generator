@@ -54,7 +54,7 @@ function App() {
     }
   };
 
-  return lists.length != 4 ? (
+  return lists.length > 0 ? (
     <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-300 to-blue-800">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-80 text-center">
         <p className="text-lg italic text-gray-800">"{quote.text}"</p>
