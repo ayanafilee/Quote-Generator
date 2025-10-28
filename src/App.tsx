@@ -117,7 +117,7 @@ function App() {
         onClick={removeLastName}
         className="mt-3 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
       >
-        Remove Extra
+        Remove Extra items
       </button>
     </div>
   );
