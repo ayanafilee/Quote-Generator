@@ -98,7 +98,7 @@ function App() {
 
         {quoteHistory.length > 0 && (
           <div className="mt-5 text-left">
-            <h3 className="font-semibold mb-1">to get Previous Quotes:</h3>
+            <h3 className="font-semibold mb-1">to get Prev Quotes:</h3>
             <ul className="text-sm text-gray-700 list-disc list-inside">
               {quoteHistory.slice(-3).map((q, i) => (
                 <li key={i}>
