@@ -112,7 +112,7 @@ function App() {
     </div>
   ) : (
     <div className="h-screen flex flex-col items-center justify-center bg-gray-100 text-lg text-gray-800">
-      <p>The list must contain exactly 4 items. 0r the items not show</p>
+      <p>The list must contain exactly 4 items. 0r the items</p>
       <button
         onClick={removeLastName}
         className="mt-3 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
